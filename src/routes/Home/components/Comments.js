@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Comment from './Comment';
+import React, { Component } from 'react'
+import Comment from './Comment'
 
-const Comments =({comments})  => {
-  return(
+const Comments = ({ comments }) => {
+  return (
     <div
-      className="comments"
+      className='comments'
     >
       <h4>Comments</h4>
       <div>
@@ -15,13 +15,12 @@ const Comments =({comments})  => {
               name={r.name}
               body={r.body}
             />
-            
+
           ))
         }
       </div>
     </div>
   )
-};
+}
 
-
-export default Comments;
+export default Comments

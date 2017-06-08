@@ -1,13 +1,13 @@
-import axios from 'axios';
-const root = 'https://jsonplaceholder.typicode.com';
+import axios from 'axios'
+const root = 'https://jsonplaceholder.typicode.com'
 // ------------------------------------
 // Constants
 // ------------------------------------
-export const POSTS_LOADED = 'POSTS_LOADED';
-export const USERS_LOADED = 'USERS_LOADED';
-export const COMMENTS_LOADED = 'COMMENTS_LOADED';
-export const DELETE_POST = 'DELETE_POST';
-export const FILTER = 'FILTER';
+export const POSTS_LOADED = 'POSTS_LOADED'
+export const USERS_LOADED = 'USERS_LOADED'
+export const COMMENTS_LOADED = 'COMMENTS_LOADED'
+export const DELETE_POST = 'DELETE_POST'
+export const FILTER = 'FILTER'
 
 // ------------------------------------
 // Actions
@@ -34,12 +34,11 @@ export function commentsLoaded (data) {
   }
 }
 
-
-export function loadComments(id) {
-  return dispatch =>  axios({
+export function loadComments (id) {
+  return dispatch => axios({
     method: 'get',
-    url: `${root}/comments?postId=1${id}`,
-  }).then(console.log("jdkdh"))
+    url: `${root}/comments?postId=${id}`,
+  })
 }
 
 export function filter (data) {

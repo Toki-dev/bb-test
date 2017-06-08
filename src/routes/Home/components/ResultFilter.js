@@ -1,5 +1,5 @@
-import React from 'react';
-import Chips from './Chips';
+import React from 'react'
+import Chips from './Chips'
 
 export const SearchFilter = ({ onSearch, filter }) => (
   <Chips
@@ -7,8 +7,6 @@ export const SearchFilter = ({ onSearch, filter }) => (
     onSearch={onSearch}
     chips={filter}
   />
-);
+)
 
-
-
-export default SearchFilter;
+export default SearchFilter

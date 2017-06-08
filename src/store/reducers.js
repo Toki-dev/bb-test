@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import locationReducer from './location'
 
-import { posts, users, comments} from '../routes/Home/components/PostReducers';
+import { posts, users, comments } from '../routes/Home/components/PostReducers'
 
 export const makeRootReducer = () => {
   return combineReducers({
@@ -12,7 +12,5 @@ export const makeRootReducer = () => {
 
   })
 }
-
-
 
 export default makeRootReducer

@@ -1,42 +1,38 @@
-import { POSTS_LOADED, USERS_LOADED, COMMENTS_LOADED, DELETE_POST} from './PostsActions';
-
+import { POSTS_LOADED, USERS_LOADED, COMMENTS_LOADED, DELETE_POST } from './PostsActions'
 
 // ------------------------------------
 // My Reducers
 // ------------------------------------
 
+const defaultState = []
 
-const defaultState = [];
-
-export function posts(state = defaultState, action) {
+export function posts (state = defaultState, action) {
   switch (action.type) {
     case POSTS_LOADED:
-      return  action.payload;
+      return action.payload
     case DELETE_POST:
-      return  state.filter((t) => {
-      if(t.id !== action.payload) return t;
-    });
+      return state.filter((t) => {
+        if (t.id !== action.payload) return t
+      })
     default:
-      return state;
+      return state
   }
 }
 
-
-
-export function users(state = defaultState, action) {
+export function users (state = defaultState, action) {
   switch (action.type) {
     case USERS_LOADED:
-      return  action.payload;
+      return action.payload
     default:
-      return state;
+      return state
   }
 }
 
-export function comments(state = defaultState, action) {
+export function comments (state = defaultState, action) {
   switch (action.type) {
     case COMMENTS_LOADED:
-      return  action.payload;
+      return action.payload
     default:
-      return state;
+      return state
   }
 }
