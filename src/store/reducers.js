@@ -1,18 +1,18 @@
 import { combineReducers } from 'redux'
 import locationReducer from './location'
 
-export const makeRootReducer = (asyncReducers) => {
+import { posts, users, comments} from '../routes/Home/components/PostReducers';
+
+export const makeRootReducer = () => {
   return combineReducers({
     location: locationReducer,
-    ...asyncReducers
+    posts: posts,
+    users: users,
+    comments: comments,
+
   })
 }
 
-export const injectReducer = (store, { key, reducer }) => {
-  if (Object.hasOwnProperty.call(store.asyncReducers, key)) return
 
-  store.asyncReducers[key] = reducer
-  store.replaceReducer(makeRootReducer(store.asyncReducers))
-}
 
 export default makeRootReducer
